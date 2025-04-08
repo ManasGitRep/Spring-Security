@@ -1,6 +1,7 @@
 package com.springsecurity.service;
 
 import com.springsecurity.model.User;
+<<<<<<< HEAD
 import com.springsecurity.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -46,5 +47,16 @@ public class UserService {
     // Delete
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
+=======
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class UserService {
+    List<User> list = new ArrayList<>();
+
+    public UserService() {
+        list.add(new User("Manas","123","m@gmail.com"));
+>>>>>>> 20a48395b4715dd73e7ee7e61a09e43c08f6120e
     }
 }
