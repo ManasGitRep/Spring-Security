@@ -20,8 +20,15 @@ public class SecurityConfig {
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
                         .anyRequest().authenticated()
+
                 )
-                .httpBasic(httpBasic -> {});
+//                .httpBasic(httpBasic -> {});    For basic security
+                //form based authentication
+                .formLogin(form->form
+                        .loginPage("/signin")
+                        .loginProcessingUrl("/dologin")
+                        .defaultSuccessUrl("/api/users")
+                        .permitAll());
         return http.build();
     }
 
