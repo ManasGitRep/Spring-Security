@@ -1,6 +1,5 @@
 package com.springsecurity.controller;
 
-<<<<<<< HEAD
 import com.springsecurity.model.User;
 import com.springsecurity.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +49,4 @@ public class UserController {
     public void deleteUser(@PathVariable Long id) {
         userService.deleteUser(id);
     }
-=======
-public class UserController {
->>>>>>> 20a48395b4715dd73e7ee7e61a09e43c08f6120e
 }
